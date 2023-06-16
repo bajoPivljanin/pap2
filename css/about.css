@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/about.avif);
+    background-size: cover;
+}
+.about{
+    text-align: center;
+    margin: 130px;
+    margin-top: 70px !important;
+}
+.about h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.about p{
+    margin-bottom: 70px;
+}
+.nav-v2{
+    position: relative !important;
+}
+.logo a:hover{
+    color: black;
+}
+@media only screen and (max-device-width:425px) and (min-device-width:320px)
+{
+   .about{
+        zoom: 2;
+        margin: 50px;
+        margin-top: -30px !important;
+        margin-bottom: 90px !important;
+   }
+   footer .col-md-3{
+    width: 100%;
+    text-align: center;
+    zoom: 2.3;
+   }
+   footer #kfooter{
+        margin-top: 20px;
+   }
+   footer p{
+    margin-bottom: 5px !important;
+   }
+   #copy{
+    zoom: 2;
+   }
+}

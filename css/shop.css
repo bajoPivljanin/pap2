@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo a:hover{
+    color: black;
+}
+.shop-nav img{
+    width:  400px;
+    height: 550px;
+    object-fit: cover;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.shop-nav .man:hover{
+    transform: scale(1.05);
+}
+.shop-nav .kid:hover{
+    transform: scale(1.05);
+}
+.shop-nav .woman:hover{
+    transform: scale(1.05);
+}
+
+.shop-nav .man{
+    position: relative;
+    background-color: black;
+    width: 400px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.shop-nav .woman{
+    position: relative;
+    background-color: black;
+    width: 400px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.shop-nav .kid{
+    position: relative;
+    background-color: black;
+    width: 400px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.shop-nav{
+    margin: 120px 0px;
+    text-align: center;
+    position: relative;
+}
+.shop-nav h1{
+    font-weight: bold;
+    font-family:sans-serif;
+}
+@media only screen and (max-device-width:431px) and (min-device-width:320px)
+{
+    .col-md-4{
+        width: 100% !important;
+    }
+    .shop-nav .man{
+        width: 100%;
+    }
+    .shop-nav img{
+        width: 100%;
+    }
+    .shop-nav .woman{
+        width: 100%;
+    }
+    .shop-nav .kid{
+        width: 100%;
+    }
+    .shop-nav {
+        margin-top: -150px !important;
+    }
+    .shop-nav h1{
+        zoom: 1.5;
+        margin-top: 50px;
+    }
+}
