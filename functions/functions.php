@@ -166,3 +166,6 @@ function user_login($email,$password){
 //     $all_product = $con->query($sql);
 //     return $all_product->fetch_all();
 // }
+function discount($price,$discount){
+    return $price - $price * $discount / 100;
+}

@@ -8,34 +8,6 @@
  $all_product = $con->query($sql);
 
 ?>
-
-<div class="nav-v2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <ul>
-                            <li><a href="#">T-SHIRT</a></li>
-                            <li><a href="#">SHIRT</a></li>
-                            <li><a href="#">PANTS</a></li>
-                            <li><a href="#">HATS</a></li>
-                            <li><a href="#">sale</a></li>
-                            <li><a href="#">clothing</a></li>
-                            <?php if(!isset($_SESSION['email'])):?>
-                                <li><a id="red" href="login.php">Login</a></li>
-                                <li><a id="red" href="register.php">Register</a></li>
-                            <?php else:?>
-                                <li><a id="red" href="logout.php">Logout</a></li>
-                            <?php endif;?>
-                            
-                        </ul>
-                    </div>
-                    <div class="col-md-5">
-                        <a href="shoppingbag.php" id="shoppingb">SHOPPING BAG</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="containerr">
             <div class="swiper">
                 <!-- Additional required wrapper -->
@@ -108,14 +80,19 @@
                 <div class="row">
                 <?php
                     while($row = mysqli_fetch_assoc($all_product)){
+                    $newPrice = discount($row["oldprice"],$row["discount"]);
                 ?>
                     <div class="col-md-3">
                         <div class="artim<?php echo $row["idArtikal"]?>">
-                            <a href="#"><img src="<?php echo $row["image"]?>" alt="" class="image"></a>
-                            <p class="name"><a href="#">T-Shirt : <?php echo $row["name"]?></a></p>
+                            <a name = "<?php echo $row["idArtikal"]?>" class="productLink" href="#"><img src="<?php echo $row["image"]?>" alt="" class="image"></a>
+                            <p class="name"><a href="#" name="<?php echo $row["idArtikal"]?>"><?php echo $row["name"]?></a></p>
+                            <?php if($newPrice == $row["oldprice"]):?>
+                            <h6 id="newprice"><?php echo $row["oldprice"]?> RSD</h6>
+                            <?php else:?>
                             <h6 id="oldprice"><?php echo $row["oldprice"]?> RSD</h6>
-                            <h6 class="newprice"><?php echo $row["newprice"]?>RSD</h6>
-                            <h5 class="discount"><?php echo $row["discount"]?></h5>
+                            <h6 class="newprice"><?php echo $newPrice?>RSD</h6>
+                            <h5 class="discount"><?php echo $row["discount"]?>%</h5>
+                            <?php endif;?>
                         </div>
                     </div>
                     <?php

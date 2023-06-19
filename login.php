@@ -2,7 +2,6 @@
     include "inc/header.php"
 ?>
 <?php
-    display_message();
     validate_user_login();
 ?>
     <!DOCTYPE html>
@@ -22,6 +21,7 @@
         <title>Login</title>
     </head>
     <body>
+        <center><h3><?php display_message();?></h3></center>
         <?php if(!isset($_SESSION['email'])):?>
         <div class="containeer">
             <form action="" method="POST">

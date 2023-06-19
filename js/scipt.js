@@ -20,8 +20,8 @@ window.onscroll = () =>{
     let sectionposition=sectionforanim.getBoundingClientRect().top;
     let screenpos=window.innerHeight;
 
-    console.log(`SCREEN ${screenpos}`);
-    console.log(`SECTION ${sectionposition}`);
+    // console.log(`SCREEN ${screenpos}`);
+    // console.log(`SECTION ${sectionposition}`);
 
     if(sectionposition<-600)
     {

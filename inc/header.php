@@ -37,3 +37,29 @@
             <i class="fa-solid fa-bars" id="menuopen"></i>
             <i class="fa-solid fa-x" id="menuclose"></i>
         </header>
+        <div class="nav-v2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <ul>
+                            <li><a href="#">T-SHIRT</a></li>
+                            <li><a href="#">SHIRT</a></li>
+                            <li><a href="#">PANTS</a></li>
+                            <li><a href="#">HATS</a></li>
+                            <li><a href="sale.php">sale</a></li>
+                            <li><a href="#">clothing</a></li>
+                            <?php if(!isset($_SESSION['email'])):?>
+                                <li><a id="red" href="login.php">Login</a></li>
+                                <li><a id="red" href="register.php">Register</a></li>
+                            <?php else:?>
+                                <li><a id="red" href="logout.php">Logout</a></li>
+                            <?php endif;?>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="shoppingbag.php" id="shoppingb">SHOPPING BAG</a>
+                    </div>
+                </div>
+            </div>
+        </div>

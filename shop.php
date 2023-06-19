@@ -25,19 +25,19 @@
                 <div class="col-md-4">
                     <h1>MAN</h1>
                     <div class="man">
-                        <img src="imgShop/man.jpg" alt="">
+                        <a href="man.php"><img src="imgShop/man.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <h1>WOMAN</h1>
                     <div class="woman">
-                        <img src="imgShop/woman.jpg" alt="">
+                        <a href="woman.php"><img src="imgShop/woman.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <h1>KID</h1>
                     <div class="kid">
-                        <img src="imgShop/kid.jpg" alt="">
+                        <a href="kid.php"><img src="imgShop/kid.jpg" alt=""></a>
                     </div>
                 </div>
             </div>

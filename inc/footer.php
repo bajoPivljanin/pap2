@@ -39,7 +39,7 @@
                     </ul>
                 </div>
             </div>
-        <p id="copy">Copyright MOMCADIJA</p>
+        <p id="copy">Copyright Momcadija</p>
             </footer>
         </div>
    </body>
