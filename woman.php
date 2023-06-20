@@ -41,7 +41,7 @@
                             <h6 id="newprice"><?php echo $row["oldprice"]?> RSD</h6>
                             <?php else:?>
                             <h6 id="oldprice"><?php echo $row["oldprice"]?> RSD</h6>
-                            <h6 class="newprice"><?php echo $newPrice?>RSD</h6>
+                            <h6 class="newprice"><?php echo $newPrice?> RSD</h6>
                             <h5 class="discount"><?php echo $row["discount"]?>%</h5>
                             <?php endif;?>
                         </div>

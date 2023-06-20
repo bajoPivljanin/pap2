@@ -53,6 +53,7 @@
                                 <li><a id="red" href="register.php">Register</a></li>
                             <?php else:?>
                                 <li><a id="red" href="logout.php">Logout</a></li>
+                                <li><a id="red" href="profile.php">Profile</a></li>
                             <?php endif;?>
                             
                         </ul>

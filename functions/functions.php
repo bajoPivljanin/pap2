@@ -169,3 +169,25 @@ function user_login($email,$password){
 function discount($price,$discount){
     return $price - $price * $discount / 100;
 }
+function getuser($userID = NULL){
+    if($userID){
+        $query = "SELECT * from users where userID =".$userID;
+        $result = query($query);
+        if($result ->num_rows>0){
+            return $result -> fetch_assoc();
+        }
+        else{
+            return "User not found";
+        }
+    }
+    else{
+        $query = "SELECT * from users where email ='".$_SESSION['email']."'";
+        $result = query($query);
+        if($result ->num_rows>0){
+            return $result -> fetch_assoc();
+        }
+        else{
+            return "User not found";
+        }
+    }
+}

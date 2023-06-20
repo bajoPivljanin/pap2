@@ -1,0 +1,38 @@
+.product-description{
+    margin-top: 150px;
+}
+.size{
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.1s;
+}
+.size:hover{
+    background-color: rgb(177, 176, 176);
+}
+.description{
+    margin-top: 20px;
+}
+#oldprice{
+    text-decoration: line-through;
+    font-size: 25px;
+}
+.newprice{
+    font-size: 25px;
+}
+.discount{
+    margin-top: 10px;
+    font-size: 18px;   
+    color: red;
+}
+.desc{
+    font-size: 18px;
+}
+#price{
+    font-size: 25px;
+}

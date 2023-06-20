@@ -29,14 +29,19 @@
                 <div class="row">
                 <?php
                     while($row = mysqli_fetch_assoc($all_product)){
+                    $newPrice = discount($row["oldprice"],$row["discount"]);
                 ?>
                     <div class="col-md-3">
                         <div class="artim<?php echo $row["idArtikal"]?>">
-                            <a href="#"><img src="<?php echo $row["image"]?>" alt="" class="image"></a>
-                            <p class="name"><a href="#"><?php echo $row["name"]?></a></p>
+                            <a name = "<?php echo $row["idArtikal"]?>" class="productLink" href="#"><img src="<?php echo $row["image"]?>" alt="" class="image"></a>
+                            <p class="name"><a href="#" name="<?php echo $row["idArtikal"]?>"><?php echo $row["name"]?></a></p>
+                            <?php if($newPrice == $row["oldprice"]):?>
+                            <h6 id="newprice"><?php echo $row["oldprice"]?> RSD</h6>
+                            <?php else:?>
                             <h6 id="oldprice"><?php echo $row["oldprice"]?> RSD</h6>
-                            <h6 class="newprice"><?php echo $row["newprice"]?>RSD</h6>
+                            <h6 class="newprice"><?php echo $newPrice?> RSD</h6>
                             <h5 class="discount"><?php echo $row["discount"]?>%</h5>
+                            <?php endif;?>
                         </div>
                     </div>
                     <?php
@@ -45,6 +50,7 @@
                 </div>
             </div>
         </div>
+        <script src="js/productpage.js"></script>
 </body>
 </html>
 

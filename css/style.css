@@ -424,7 +424,7 @@ footer span{
     text-transform: uppercase;
     font-weight: bold;
 }
-.size{
+/* .size{
     text-decoration: none;
     color: white;
     background-color: black;
@@ -437,6 +437,29 @@ footer span{
     letter-spacing: 1px;
     transition: 0.5s;
     margin-bottom: 100px; 
+} */
+.userTable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.userTable td {
+    padding: 10px;
+    border: 1px solid black;
+  }
+.userTable .tdName{
+    width: 150px;
+}
+.userTable .tdPHP{
+    width: 250px;
+}
+.userInformation{
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 3px;
 }
 @media only screen and (max-device-width:425px) and (min-device-width:320px) {
     .nav{

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2023 at 11:53 PM
+-- Generation Time: Jun 20, 2023 at 06:22 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -24,6 +24,38 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `artikli`
+--
+
+CREATE TABLE `artikli` (
+  `idArtikal` int(11) NOT NULL,
+  `brandName` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `oldprice` int(11) NOT NULL,
+  `discount` int(11) NOT NULL,
+  `image` text NOT NULL,
+  `category` varchar(200) NOT NULL,
+  `sex` varchar(100) NOT NULL,
+  `size` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `artikli`
+--
+
+INSERT INTO `artikli` (`idArtikal`, `brandName`, `name`, `oldprice`, `discount`, `image`, `category`, `sex`, `size`) VALUES
+(1, 'Hugo Boss', 'HUGO men T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'men', 's,m,l,xl'),
+(2, 'Hugo Boss', 'HUGO woman T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'woman', 's,m,l,xl,xxl'),
+(3, 'Hugo Boss', 'HUGO kid T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'kids', 'xs,m,l,xl'),
+(4, 'Armani', 'Armani men Jeans', 10000, 0, 'img/articleimgbos.jpg', 'jeans', 'men', 's,m,l,xl'),
+(5, 'Armani', 'Armani women Jeans', 10000, 0, 'img/articleimgbos.jpg', 'jeans', 'woman', 's,m,l,xl,xxl'),
+(6, 'Armani', 'Armani Jeans for kids', 5000, 20, 'img/articleimgbos.jpg', 'jeans', 'kids', 'xs,s,m,l'),
+(7, 'Moncler', 'Moncler Puffer jacket for men', 50000, 10, 'img/articleimgbos.jpg', 'jacket', 'men', 's,m,l,xl,xxl,xxxl'),
+(8, 'Moncler', 'Moncler Puffer jacket for kids', 50000, 10, 'img/articleimgbos.jpg', 'jacket', 'kids', 's,m,l');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `artiklitest`
 --
 
@@ -31,8 +63,7 @@ CREATE TABLE `artiklitest` (
   `idArtikal` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `oldprice` int(11) NOT NULL,
-  `newprice` int(11) NOT NULL,
-  `discount` text NOT NULL,
+  `discount` int(11) NOT NULL,
   `image` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -40,11 +71,11 @@ CREATE TABLE `artiklitest` (
 -- Dumping data for table `artiklitest`
 --
 
-INSERT INTO `artiklitest` (`idArtikal`, `name`, `oldprice`, `newprice`, `discount`, `image`) VALUES
-(1, 'Muhammad Ali', 38500, 30800, '20%', 'img/articleimgbos.jpg'),
-(2, 'Myike Tyson', 38500, 30800, '20%', 'img/articleimgbos.jpg'),
-(3, 'Canelo Alvarez', 38500, 30800, '20%', 'img/articleimgbos.jpg'),
-(4, 'Tyson Fury', 38500, 30800, '20%', 'img/articleimgbos.jpg');
+INSERT INTO `artiklitest` (`idArtikal`, `name`, `oldprice`, `discount`, `image`) VALUES
+(1, 'Muhammad Ali', 38500, 0, 'img/articleimgbos.jpg'),
+(2, 'Myike Tyson', 38500, 20, 'img/articleimgbos.jpg'),
+(3, 'Canelo Alvarez', 38500, 20, 'img/articleimgbos.jpg'),
+(4, 'Tyson Fury', 38500, 20, 'img/articleimgbos.jpg');
 
 -- --------------------------------------------------------
 
@@ -77,6 +108,12 @@ INSERT INTO `users` (`userID`, `firstName`, `lastName`, `email`, `username`, `pa
 --
 
 --
+-- Indexes for table `artikli`
+--
+ALTER TABLE `artikli`
+  ADD PRIMARY KEY (`idArtikal`);
+
+--
 -- Indexes for table `artiklitest`
 --
 ALTER TABLE `artiklitest`
@@ -91,6 +128,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `artikli`
+--
+ALTER TABLE `artikli`
+  MODIFY `idArtikal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `artiklitest`

@@ -13,9 +13,9 @@
                 <div class="col-md-3">
                     <p id="kfooter">Kategorije</p>
                     <ul>
-                        <li><a href="#">Muskarci</a></li>
-                        <li><a href="#">Zene</a></li>
-                        <li><a href="#">Deca</a></li>
+                        <li><a href="man.php">Muskarci</a></li>
+                        <li><a href="woman.php">Zene</a></li>
+                        <li><a href="kid.php">Deca</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
