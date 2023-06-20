@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2023 at 06:22 PM
+-- Generation Time: Jun 20, 2023 at 07:29 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `artikli` (
   `idArtikal` int(11) NOT NULL,
+  `idBrand` int(11) NOT NULL,
   `brandName` varchar(200) NOT NULL,
   `name` varchar(200) NOT NULL,
   `oldprice` int(11) NOT NULL,
@@ -43,15 +44,15 @@ CREATE TABLE `artikli` (
 -- Dumping data for table `artikli`
 --
 
-INSERT INTO `artikli` (`idArtikal`, `brandName`, `name`, `oldprice`, `discount`, `image`, `category`, `sex`, `size`) VALUES
-(1, 'Hugo Boss', 'HUGO men T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'men', 's,m,l,xl'),
-(2, 'Hugo Boss', 'HUGO woman T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'woman', 's,m,l,xl,xxl'),
-(3, 'Hugo Boss', 'HUGO kid T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'kids', 'xs,m,l,xl'),
-(4, 'Armani', 'Armani men Jeans', 10000, 0, 'img/articleimgbos.jpg', 'jeans', 'men', 's,m,l,xl'),
-(5, 'Armani', 'Armani women Jeans', 10000, 0, 'img/articleimgbos.jpg', 'jeans', 'woman', 's,m,l,xl,xxl'),
-(6, 'Armani', 'Armani Jeans for kids', 5000, 20, 'img/articleimgbos.jpg', 'jeans', 'kids', 'xs,s,m,l'),
-(7, 'Moncler', 'Moncler Puffer jacket for men', 50000, 10, 'img/articleimgbos.jpg', 'jacket', 'men', 's,m,l,xl,xxl,xxxl'),
-(8, 'Moncler', 'Moncler Puffer jacket for kids', 50000, 10, 'img/articleimgbos.jpg', 'jacket', 'kids', 's,m,l');
+INSERT INTO `artikli` (`idArtikal`, `idBrand`, `brandName`, `name`, `oldprice`, `discount`, `image`, `category`, `sex`, `size`) VALUES
+(1, 2, 'Hugo Boss', 'HUGO men T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'men', 's,m,l,xl'),
+(2, 2, 'Hugo Boss', 'HUGO woman T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'woman', 's,m,l,xl,xxl'),
+(3, 2, 'Hugo Boss', 'HUGO kid T-Shirt', 7350, 10, 'img/articleimgbos.jpg', 'tshirt', 'kids', 'xs,m,l,xl'),
+(4, 3, 'Armani', 'Armani men Jeans', 10000, 0, 'img/articleimgbos.jpg', 'jeans', 'men', 's,m,l,xl'),
+(5, 3, 'Armani', 'Armani women Jeans', 10000, 0, 'img/articleimgbos.jpg', 'jeans', 'woman', 's,m,l,xl,xxl'),
+(6, 3, 'Armani', 'Armani Jeans for kids', 5000, 20, 'img/articleimgbos.jpg', 'jeans', 'kids', 'xs,s,m,l'),
+(7, 10, 'Moncler', 'Moncler Puffer jacket for men', 50000, 10, 'img/articleimgbos.jpg', 'jacket', 'men', 's,m,l,xl,xxl,xxxl'),
+(8, 10, 'Moncler', 'Moncler Puffer jacket for kids', 50000, 10, 'img/articleimgbos.jpg', 'jacket', 'kids', 's,m,l');
 
 -- --------------------------------------------------------
 
@@ -76,6 +77,35 @@ INSERT INTO `artiklitest` (`idArtikal`, `name`, `oldprice`, `discount`, `image`)
 (2, 'Myike Tyson', 38500, 20, 'img/articleimgbos.jpg'),
 (3, 'Canelo Alvarez', 38500, 20, 'img/articleimgbos.jpg'),
 (4, 'Tyson Fury', 38500, 20, 'img/articleimgbos.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `brands`
+--
+
+CREATE TABLE `brands` (
+  `idBrand` int(11) NOT NULL,
+  `brandName` varchar(200) NOT NULL,
+  `brandImg` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `brands`
+--
+
+INSERT INTO `brands` (`idBrand`, `brandName`, `brandImg`) VALUES
+(1, 'C.P. Company', 'cp.webp'),
+(2, 'Hugo Boss', ' '),
+(3, 'Armani', ' '),
+(4, 'Prada', ' '),
+(5, 'Versace', ' '),
+(6, 'Nike', ' '),
+(7, 'The North Face', ' '),
+(8, 'Napapijri', ' '),
+(9, 'Lacoste', ' '),
+(10, 'Moncler', ' '),
+(11, 'Bogner', ' ');
 
 -- --------------------------------------------------------
 
@@ -120,6 +150,12 @@ ALTER TABLE `artiklitest`
   ADD PRIMARY KEY (`idArtikal`);
 
 --
+-- Indexes for table `brands`
+--
+ALTER TABLE `brands`
+  ADD PRIMARY KEY (`idBrand`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -140,6 +176,12 @@ ALTER TABLE `artikli`
 --
 ALTER TABLE `artiklitest`
   MODIFY `idArtikal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `brands`
+--
+ALTER TABLE `brands`
+  MODIFY `idBrand` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`

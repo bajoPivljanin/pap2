@@ -1,5 +1,5 @@
 <?php 
-    include"functions/init.php"; 
+    include "functions/init.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,11 +43,11 @@
                     <div class="col-md-7">
                         <ul>
                             <li><a href="#">T-SHIRT</a></li>
-                            <li><a href="#">SHIRT</a></li>
                             <li><a href="#">PANTS</a></li>
                             <li><a href="#">HATS</a></li>
                             <li><a href="sale.php">sale</a></li>
                             <li><a href="#">clothing</a></li>
+                            <li><a href="brands.php">brands</a></li>
                             <?php if(!isset($_SESSION['email'])):?>
                                 <li><a id="red" href="login.php">Login</a></li>
                                 <li><a id="red" href="register.php">Register</a></li>

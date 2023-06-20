@@ -6,3 +6,16 @@ INSERT INTO `artikli` (`idArtikal`, `brandName`, `name`, `oldprice`, `newprice`,
 INSERT INTO `artikli` (`idArtikal`, `brandName`, `name`, `oldprice`, `newprice`, `discount`, `image`, `category`, `sex`) VALUES ('6', 'Armani', 'Armani Jeans for kids', '5000', '4000', '20', 'img/articleimgbos.jpg', 'jeans', 'kids');
 INSERT INTO `artikli` (`idArtikal`, `brandName`, `name`, `oldprice`, `newprice`, `discount`, `image`, `category`, `sex`) VALUES ('7', 'Moncler', 'Moncler Puffer jacket for men', '50000', '45000', '10', 'img/articleimgbos.jpg', 'jacket', 'men');
 INSERT INTO `artikli` (`idArtikal`, `brandName`, `name`, `oldprice`, `newprice`, `discount`, `image`, `category`, `sex`) VALUES ('8', 'Moncler', 'Moncler Puffer jacket for kids', '50000', '45000', '10', 'img/articleimgbos.jpg', 'jacket', 'kids');
+
+/*brandName*/
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('1', 'C.P. Company', 'cp.webp');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('2', 'Hugo Boss', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('3', 'Armani Exchange', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('4', 'Prada', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('5', 'Versace', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('6', 'Nike', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('7', 'The North Face', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('8', 'Napapijri', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('9', 'Lacoste', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('10', 'Moncler', ' ');
+INSERT INTO `brandname` (`idBrand`, `brandName`, `brandImg`) VALUES ('11', 'Bogner', ' ');
