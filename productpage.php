@@ -31,38 +31,6 @@
 </head>
 <body>
 
-    
-                   
-    <?php foreach ($sizes as $size):?>
-    <!-- <button class="size"><?php echo $size;?></button> -->
-    <?php endforeach;?>
-    <!-- <main>         
-        <div class="product-image">
-        <img src="<?php echo $img?>" alt="" >
-        </div>
-        <div class="product-info">
-        <h4>Description</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo risus id faucibus tincidunt.</p>
-
-        <h2>Features</h2>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-
-        <h2>Price</h2>
-        <?php if($newPrice == $row["oldprice"]):?>
-        <h6 id="newprice"><?php echo $row["oldprice"]?> RSD</h6>
-        <?php else:?>
-        <h6 id="oldprice"><?php echo $row["oldprice"]?> RSD</h6>
-        <h6 class="newprice"><?php echo $newPrice?> RSD</h6>
-        <h5 class="discount"><?php echo $row["discount"]?>%</h5>
-        <?php endif;?>
-
-        <button>Add to Cart</button>
-        </div> -->
-    </main>
     <div class="container">
         <div class="row">
             <div class="col-md-6">

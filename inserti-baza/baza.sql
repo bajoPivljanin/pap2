@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2023 at 07:29 PM
+-- Generation Time: Jun 20, 2023 at 11:40 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -95,17 +95,17 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`idBrand`, `brandName`, `brandImg`) VALUES
-(1, 'C.P. Company', 'cp.webp'),
-(2, 'Hugo Boss', ' '),
-(3, 'Armani', ' '),
-(4, 'Prada', ' '),
-(5, 'Versace', ' '),
-(6, 'Nike', ' '),
-(7, 'The North Face', ' '),
-(8, 'Napapijri', ' '),
-(9, 'Lacoste', ' '),
-(10, 'Moncler', ' '),
-(11, 'Bogner', ' ');
+(1, 'C.P. Company', 'cplogo.png'),
+(2, 'Hugo Boss', 'bosslogo.png'),
+(3, 'Armani', 'armanilogo.jpg'),
+(4, 'Prada', 'pradalogo.png'),
+(5, 'Versace', 'versacelogo.png'),
+(6, 'Nike', 'nikelogo.png'),
+(7, 'The North Face', 'tnflogo.png'),
+(8, 'Napapijri', 'napapijrilogo.jpg'),
+(9, 'Lacoste', 'lacostelogo.png'),
+(10, 'Moncler', 'monclerlogo.png'),
+(11, 'Bogner', 'bognerlogo.png');
 
 -- --------------------------------------------------------
 
