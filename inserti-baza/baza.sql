@@ -72,7 +72,7 @@ CREATE TABLE `artiklitest` (
 --
 
 INSERT INTO `artiklitest` (`idArtikal`, `name`, `oldprice`, `discount`, `image`) VALUES
-(1, 'Muhammad Ali', 38500, 0, 'img/articleimgbos.jpg'),
+(1, 'Muhammad Ali', 38500, 10, 'img/articleimgbos.jpg'),
 (2, 'Myike Tyson', 38500, 20, 'img/articleimgbos.jpg'),
 (3, 'Canelo Alvarez', 38500, 20, 'img/articleimgbos.jpg'),
 (4, 'Tyson Fury', 38500, 20, 'img/articleimgbos.jpg');
