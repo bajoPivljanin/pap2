@@ -57,7 +57,7 @@
                     <?php
                      }
                     ?>
-                </div>
+                </div> 
             </div>
         </div>
         <script src="js/productpage.js"></script>
